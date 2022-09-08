@@ -10,6 +10,7 @@
 #include <fstream>
 #include <iostream>
 #include <algorithm> 
+#include <functional>
 
 #include "DMTypes.h"
 
@@ -29,7 +30,7 @@ public:
     using tuple_id  = std::tuple<int, std::vector<std::complex<double>>>;
     using tuple_dd  = std::tuple<std::vector<double>, std::vector<double>>;
 
-    using dFunction = double (*)(double);
+    using dFunction = std::function<double(double)>;
     using cFunction = double_c (*)(int);
 
 private:
