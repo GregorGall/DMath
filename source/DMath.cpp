@@ -105,7 +105,7 @@ auto DMath::nullApp() -> void
 auto DMath::fillArg(double start, double step) ->DMath&
 {
 
-    int size = function.size();
+    auto size = function.size();
     for (int i = 0; i < size; ++i) {
         double temp = start + i * step;
         argument.push_back(temp);

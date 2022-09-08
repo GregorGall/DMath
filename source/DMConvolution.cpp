@@ -80,7 +80,7 @@ auto DMath::convFT(vector_cd& f1, vector_cd& f2) -> vector_cd
 
     t1.function = t1.function * conj(t2.function);
 
-    int size = f1.size() + f2.size();
+    auto size = f1.size() + f2.size();
 
     t1.setRange(-0.5 * size, 0.5 * size);
     t1.cmFT(-1).function;

@@ -13,7 +13,7 @@ auto DMath::frFFT(int MODE, double T) -> DMath&
 	vector<complex<double>> X;
 
 	int NEXP;
-	int N = function.size();
+	int N = static_cast<int>(function.size());
 
 	/* Аргумент не переписывается -> T не зависит от MODE */
 	if (!T) {
