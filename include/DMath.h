@@ -1,5 +1,5 @@
 /*###################################################################################################################*/
-// Êëàññ îïåðàöèé íàä äèñêðåòíûìè çíà÷åíèÿìè
+// ÐšÐ»Ð°ÑÑ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¹ Ð½Ð°Ð´ Ð´Ð¸ÑÐºÑ€ÐµÑ‚Ð½Ñ‹Ð¼Ð¸ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÑÐ¼Ð¸
 
 #pragma once
 
@@ -35,80 +35,80 @@ public:
 
 private:
 
-    double lLimit{ 0 };                                          // Ëåâûé ïðåäåë àðãóìåíòà ïðåîáðàçîâàííîé ôóíêöèè
-    double rLimit{ 0 };                                          // Ïðàâûé ïðåäåë àðãóìåíòà ïðåîáðàçîâàííîé ôóíêöèè
-    double discrete{ 0 };                                        // Äèñêðåò âû÷èñëåíèÿ
-    vector_b setUp{ true, true };                                // Ðåæèì ðàñ÷åòà ãðàíèö è äèñêðåòà â ÏÔ
+    double lLimit{ 0 };                                          // Ð›ÐµÐ²Ñ‹Ð¹ Ð¿Ñ€ÐµÐ´ÐµÐ» Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð° Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð½Ð¾Ð¹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
+    double rLimit{ 0 };                                          // ÐŸÑ€Ð°Ð²Ñ‹Ð¹ Ð¿Ñ€ÐµÐ´ÐµÐ» Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð° Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð½Ð¾Ð¹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
+    double discrete{ 0 };                                        // Ð”Ð¸ÑÐºÑ€ÐµÑ‚ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ
+    vector_b setUp{ true, true };                                // Ð ÐµÐ¶Ð¸Ð¼ Ñ€Ð°ÑÑ‡ÐµÑ‚Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ† Ð¸ Ð´Ð¸ÑÐºÑ€ÐµÑ‚Ð° Ð² ÐŸÐ¤
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-// Âû÷èñëèòåëüíûå ìåòîäû:
+// Ð’Ñ‹Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ Ð¼ÐµÑ‚Ð¾Ð´Ñ‹:
 
-    auto preFFT(int N, int MODE)                 -> tuple_id;    // Âû÷èñëåíèå êîìïëåêñíûõ ýêñïîíåíò
+    auto preFFT(int N, int MODE)                 -> tuple_id;    // Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ñ‹Ñ… ÑÐºÑÐ¿Ð¾Ð½ÐµÐ½Ñ‚
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-// Ìåòîäû âûâîäà:
+// ÐœÐµÑ‚Ð¾Ð´Ñ‹ Ð²Ñ‹Ð²Ð¾Ð´Ð°:
 
-    auto getArgument(int p)                      -> double;      // Âíóòðåííèé ìåòîä ïîëó÷åíèÿ çíà÷åíèÿ àðãóìåíòà
-    auto getParametr(double p)                   -> double;      // Âíóòðåííèé ìåòîä ïîëó÷åíèÿ çíà÷åíèÿ ïàðàìåòðà
-    auto getTurnFactor(double mode,                              // Ðàñ÷åò ïîâîðà÷èâàþùåãî ìíîæèòåëÿ
+    auto getArgument(int p)                      -> double;      // Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ð¸Ð¹ Ð¼ÐµÑ‚Ð¾Ð´ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ñ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð°
+    auto getParametr(double p)                   -> double;      // Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ð¸Ð¹ Ð¼ÐµÑ‚Ð¾Ð´ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ñ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°
+    auto getTurnFactor(double mode,                              // Ð Ð°ÑÑ‡ÐµÑ‚ Ð¿Ð¾Ð²Ð¾Ñ€Ð°Ñ‡Ð¸Ð²Ð°ÑŽÑ‰ÐµÐ³Ð¾ Ð¼Ð½Ð¾Ð¶Ð¸Ñ‚ÐµÐ»Ñ
                        double p1, 
                        double p2)                -> double_c;
 
 public:
     
-    vector_cd argument;                                          // Êîìïëåêñíûé âåêòîð àðãóìåíòîâ ôóíêöèè
-    vector_cd function;                                          // Êîìïëåêñíûå âåêòîð çíà÷åíèé ôóíêöèè
+    vector_cd argument;                                          // ÐšÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ñ‹Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€ Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
+    vector_cd function;                                          // ÐšÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ñ‹Ðµ Ð²ÐµÐºÑ‚Ð¾Ñ€ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
 
     DMath() {};
     DMath(vector_cd f) : function{ f } {};
     DMath(vector_cd a, vector_cd f) :argument{ a }, function{ f }{};
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-// Âû÷èñëèòåëüíûå ìåòîäû:
+// Ð’Ñ‹Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ Ð¼ÐµÑ‚Ð¾Ð´Ñ‹:
 
-    auto roll()                                  -> DMath&;      // Ïåðåñòàíîâêà ëåâîé è ïðàâîé ïîëîâèíû function
-    auto cmFT(int mode = 1)                      -> DMath&;      // Êëàññè÷åñêîå ïðåîáðàçîâàíèå Ôóðüå
-    auto frFFT(int mode = 1, double T = 1)       -> DMath&;      // Ïðåîáðàçîâàíèå Ôóðüå ñ ÷àñòîòíîé äåöèìàöèåé
-    auto convFT()                                -> DMath&;      // Ñâåðòêà function ñ function
-    auto convFT(vector_cd& f1)                   -> DMath&;      // Ñâåðòêà function ñ f1
-    auto convFT(vector_cd& f1, vector_cd& f2)    -> vector_cd;   // Ñâåðòêà f1 ñ f2
-    auto convFFT()                               -> DMath&;      // Ñâåðòêà function ñ function ÷åðåç ÁÏÔ
-    auto convFFT(vector_cd& f1)                  -> DMath&;      // Ñâåðòêà function ñ f1 ÷åðåç ÁÏÔ
-    auto convFFT(vector_cd& f1, vector_cd& f2)   -> vector_cd;   // Ñâåðòêà f1 ñ f2 ÷åðåç ÁÏÔ
-    auto nullApp()                               -> void;        // Äîïîëíåíèå function íóëÿìè äî ïåðâîé ñòåïåíè äâîéêè 
+    auto roll()                                  -> DMath&;      // ÐŸÐµÑ€ÐµÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð»ÐµÐ²Ð¾Ð¹ Ð¸ Ð¿Ñ€Ð°Ð²Ð¾Ð¹ Ð¿Ð¾Ð»Ð¾Ð²Ð¸Ð½Ñ‹ function
+    auto cmFT(int mode = 1)                      -> DMath&;      // ÐšÐ»Ð°ÑÑÐ¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¤ÑƒÑ€ÑŒÐµ
+    auto frFFT(int mode = 1, double T = 1)       -> DMath&;      // ÐŸÑ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¤ÑƒÑ€ÑŒÐµ Ñ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ð½Ð¾Ð¹ Ð´ÐµÑ†Ð¸Ð¼Ð°Ñ†Ð¸ÐµÐ¹
+    auto convFT()                                -> DMath&;      // Ð¡Ð²ÐµÑ€Ñ‚ÐºÐ° function Ñ function
+    auto convFT(vector_cd& f1)                   -> DMath&;      // Ð¡Ð²ÐµÑ€Ñ‚ÐºÐ° function Ñ f1
+    auto convFT(vector_cd& f1, vector_cd& f2)    -> vector_cd;   // Ð¡Ð²ÐµÑ€Ñ‚ÐºÐ° f1 Ñ f2
+    auto convFFT()                               -> DMath&;      // Ð¡Ð²ÐµÑ€Ñ‚ÐºÐ° function Ñ function Ñ‡ÐµÑ€ÐµÐ· Ð‘ÐŸÐ¤
+    auto convFFT(vector_cd& f1)                  -> DMath&;      // Ð¡Ð²ÐµÑ€Ñ‚ÐºÐ° function Ñ f1 Ñ‡ÐµÑ€ÐµÐ· Ð‘ÐŸÐ¤
+    auto convFFT(vector_cd& f1, vector_cd& f2)   -> vector_cd;   // Ð¡Ð²ÐµÑ€Ñ‚ÐºÐ° f1 Ñ f2 Ñ‡ÐµÑ€ÐµÐ· Ð‘ÐŸÐ¤
+    auto nullApp()                               -> void;        // Ð”Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ function Ð½ÑƒÐ»ÑÐ¼Ð¸ Ð´Ð¾ Ð¿ÐµÑ€Ð²Ð¾Ð¹ ÑÑ‚ÐµÐ¿ÐµÐ½Ð¸ Ð´Ð²Ð¾Ð¹ÐºÐ¸ 
     auto fillArg(double start = 0,
-                 double step = 1)                ->DMath&;       // Çàïîëíåíèå àðãóìåíòà  
+                 double step = 1)                ->DMath&;       // Ð—Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð°  
 
 
-    static auto conj(vector_cd f)                -> vector_cd;   // Êîìïëåêñíîå ñîïðÿæåíèå çíà÷åíèé âåêòîðà 
+    static auto conj(vector_cd f)                -> vector_cd;   // ÐšÐ¾Ð¼Ð¿Ð»ÐµÐºÑÐ½Ð¾Ðµ ÑÐ¾Ð¿Ñ€ÑÐ¶ÐµÐ½Ð¸Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° 
     static auto nullApp(vector_cd& f,
-                        int app = 0)             -> void;        // Äîïîëíåíèå íóëÿìè äî pow(2, app)
+                        int app = 0)             -> void;        // Ð”Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð½ÑƒÐ»ÑÐ¼Ð¸ Ð´Ð¾ pow(2, app)
     static auto integral(dFunction function,                     
                   double a, 
                   double b, 
-                  double step = 1)               -> double;      // Âû÷èñëåíèå èíòåãðàëà ïåðåäàííîé ôóíêöèè
+                  double step = 1)               -> double;      // Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ Ð¸Ð½Ñ‚ÐµÐ³Ñ€Ð°Ð»Ð° Ð¿ÐµÑ€ÐµÐ´Ð°Ð½Ð½Ð¾Ð¹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
 
     auto friend operator*(vector_cd f1, 
-                          vector_cd f2)          -> vector_cd;   // Ïåðåãðóçêà "*" óìíîæåíèåì âåêòîðîâ
+                          vector_cd f2)          -> vector_cd;   // ÐŸÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° "*" ÑƒÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸ÐµÐ¼ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð¾Ð²
     auto friend operator*(DMath dm1,
-                          DMath dm2)             -> DMath;       // Ïåðåãðóçêà "*" óìíîæåíèåì îáúåêòîâ DMath
+                          DMath dm2)             -> DMath;       // ÐŸÐµÑ€ÐµÐ³Ñ€ÑƒÐ·ÐºÐ° "*" ÑƒÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ð±ÑŠÐµÐºÑ‚Ð¾Ð² DMath
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-// Ìåòîäû ââîäà:
+// ÐœÐµÑ‚Ð¾Ð´Ñ‹ Ð²Ð²Ð¾Ð´Ð°:
 
-    auto setAuto()                               -> DMath&;      // Óñòàíîâêà àâòîðåæèìà ðàñ÷åòà äèñêðåòà è ãðàíèö ÏÔ
-    auto setRange(double lLimit, double rLimit)  -> DMath&;      // Óñòàíîâêà ãðàíèö àðãóìåíòà ïðåîáðàçîâàííîé ôóíêöèè
-    auto setDiscrete(double discrete)            -> DMath&;      // Óñòàíîâêà âåëè÷èíû äèñêðåòà àðãóìåíòà â ÏÔ
+    auto setAuto()                               -> DMath&;      // Ð£ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð°Ð²Ñ‚Ð¾Ñ€ÐµÐ¶Ð¸Ð¼Ð° Ñ€Ð°ÑÑ‡ÐµÑ‚Ð° Ð´Ð¸ÑÐºÑ€ÐµÑ‚Ð° Ð¸ Ð³Ñ€Ð°Ð½Ð¸Ñ† ÐŸÐ¤
+    auto setRange(double lLimit, double rLimit)  -> DMath&;      // Ð£ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð³Ñ€Ð°Ð½Ð¸Ñ† Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð° Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð½Ð¾Ð¹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
+    auto setDiscrete(double discrete)            -> DMath&;      // Ð£ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð²ÐµÐ»Ð¸Ñ‡Ð¸Ð½Ñ‹ Ð´Ð¸ÑÐºÑ€ÐµÑ‚Ð° Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð° Ð² ÐŸÐ¤
 
     auto setValue(int num, double_c value)       -> DMath&;
     auto setFunction(int num, cFunction fill)    -> DMath&;
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-// Ìåòîäû âûâîäà:
+// ÐœÐµÑ‚Ð¾Ð´Ñ‹ Ð²Ñ‹Ð²Ð¾Ð´Ð°:
 
-    auto getValue(Format format = Format::REAL)  -> tuple_dd;    // Ïîëó÷åíèå òüþïëà çíà÷åíèé è àðãóìåíòà
-    auto getValue(Format format, Type type)      -> vector_d;    // Ïîëó÷åíèå âåêòîðà çíà÷åíèé/àðãóìåíòà
-    auto getFile(string name = "DMath.txt")      -> void;        // Âûâîä â ôàéë
+    auto getValue(Format format = Format::REAL)  -> tuple_dd;    // ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ðµ Ñ‚ÑŒÑŽÐ¿Ð»Ð° Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ð¸ Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð°
+    auto getValue(Format format, Type type)      -> vector_d;    // ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ðµ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹/Ð°Ñ€Ð³ÑƒÐ¼ÐµÐ½Ñ‚Ð°
+    auto getFile(string name = "DMath.txt")      -> void;        // Ð’Ñ‹Ð²Ð¾Ð´ Ð² Ñ„Ð°Ð¹Ð»
     
 };
 
